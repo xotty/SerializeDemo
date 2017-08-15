@@ -1,0 +1,14 @@
+//flat buffer数据对象原文件，依据Student.java编制
+//该文件经"flatc --java student.fbs"编译后生成StudentFB，此后本文件不再是必须的
+
+namespace org.xottys.serializedemo;
+
+table StudentFB {
+  name:string;
+  age:uint;
+  isMale:bool;
+  weight:float;
+  favoriteBooks:[string];
+  interests:[string];
+}
+

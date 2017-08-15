@@ -1,0 +1,14 @@
+//protocol buffer数据对象原文件，依据Student.java编制
+//该文件经"protoc --out=. student.proto"编译后生成StudentPB，此后本文件不再是必须的
+
+syntax = "proto3";
+option java_package = "org.xottys.serializedemo";
+option java_outer_classname = "StudentPB";
+message Student {
+    string name=1;
+    uint32 age=2;
+    bool isMale=3;
+    float weight=4;
+    repeated string favoriteBooks=5 ;
+    repeated string interests=6 ;
+}

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SerializeDemo</string>
+    <string name="label">对象序列化值如下(可能会有乱码)：</string>
+</resources>
