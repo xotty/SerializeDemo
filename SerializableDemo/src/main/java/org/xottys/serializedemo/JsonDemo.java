@@ -17,14 +17,14 @@ public class JsonDemo {
 
     //object->json字符串
     static public String object2Json(Object obj) {
-        String jsonString = JSON.toJSONString(obj);
-        return jsonString;
+//        String jsonString = JSON.toJSONString(obj);
+        return JSON.toJSONString(obj);
     }
 
     //json字符串->object
     static public <T> T json2Object(String jsonString, Class<T> clazz) {
-        T t = JSON.parseObject(jsonString, clazz);
-        return t;
+//        T t = JSON.parseObject(jsonString, clazz);
+        return JSON.parseObject(jsonString, clazz);
     }
 
 }

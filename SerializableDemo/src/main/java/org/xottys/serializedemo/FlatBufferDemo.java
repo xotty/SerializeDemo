@@ -86,13 +86,12 @@ public class FlatBufferDemo {
         s.setAge((int) student.age());
         s.setMale(student.isMale());
         s.setWeight(student.weight());
-        ;
         String[] favoriteBooks = new String[student.favoriteBooksLength()];
         for (int i = 0; i < student.favoriteBooksLength(); i++) {
             favoriteBooks[i] = student.favoriteBooks(i);
         }
         s.setFavoriteBooks(favoriteBooks);
-        HashSet<String> hs = new HashSet<String>(student.interestsLength());
+        HashSet<String> hs = new HashSet<>(student.interestsLength());
         for (int i = 0; i < student.interestsLength(); i++) {
             hs.add(student.interests(i));
         }

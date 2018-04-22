@@ -11,6 +11,8 @@
  */
 package org.xottys.serializedemo;
 
+import com.google.protobuf.InvalidProtocolBufferException;
+
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -53,7 +55,7 @@ public class ProtocolBufferDemo {
         StudentPB.Student t = null;
         try {
             t = StudentPB.Student.parseFrom(data);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (InvalidProtocolBufferException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
